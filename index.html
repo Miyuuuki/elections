@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="/dist/output.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<title>Elections 2022</title>
+
+<script>
+  $(function() { 
+  $('.dropdown-toggle').click(function() { $(this).next('.dropdown').slideToggle();
+  });
+  $(document).click(function(e) 
+  { 
+  var target = e.target; 
+  if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) 
+    { $('.dropdown').slideUp(); }
+  });
+  });
+
+  $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+  });
+
+  $(document).ready(function(){
+    $("#flip").click(function(){
+      $("#panel").slideDown("slow");
+    });
+  });
+
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("#div1").fadeIn();
+    });
+  });
+</script>
+
+</head>
+<body class="bg-yellow-50">
+  <div id="top">
+    <img src="images\header.png" alt="header" class="w-screen">
+  </div>
+  <!--nav-->
+  <div id="nav">
+    <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-blue-900 shadow sm:items-baseline w-full">
+      <a class="dropdown-toggle" href="#">Show Me Around</a>
+        <ul class="dropdown rounded">
+          <li><a href="#about">About</a></li>
+          <li><a href="#flip">Election Day</a></li>
+          <li><a href="#candidates">Candidates</a></li>
+        </ul>
+    </nav>
+  </div>   
+    <div class="bg-gray-100 text-right content-evenly">
+    <img src="images\bg.png" alt="first image"class="object-cover h-full w-screen">   
+  </div>
+  <!--title-->
+  <div id="about" class="bg-blue-900 w-full">
+    <h1 class="text-8xl text-gray-100 text-center p-2">ELECTIONS 2022</h1>
+  </div>
+  <!--about elections-->
+  <div class="max-w-sm w-full lg:max-w-full lg:flex">
+    <div class="bg-white shadow-2xl w-screen flex flex-col justify-between leading-normal">
+      <div class="p-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">About Elections 2022</div>
+          <p class="text-gray-700 text-base">
+            Elections for the positions of barangay captain, kagawad, and the sangguniang kabataan will be held on December 5, 2022 per R.A. 11462.
+            On May 9, 2022, registered voters will cast their ballots to elect officials who will fill executive and legislative posts at the national, provincial and local levels.
+            In total, the Filipino people shall elect into office:
+          </p>
+          <ul style="list-style-type:square;" class="p-5">
+            <li>President</li>
+            <li>Vice president</li>
+            <li>Senators</li>
+            <li>Members of the House of Representatives from district and party-list groups</li>
+            <li>Members of provincial boards</li>
+            <li>Provincial governors and vice-governors</li>
+            <li>Mayors and vice-mayors of cities and municipalities</li>
+            <li>Councilors</li>    
+          </ul>
+      </div>
+      <div class="flex items-center pl-8 pb-8">
+        <button onclick="window.location.href='https://votepilipinas.com/index.html';">Click Here For More Information</button>
+      </div>
+      <div id="flip" class="text-white">When is Elections Day?  ↓</div>
+        <div id="panel" class="text-white">May 9, 2022 :)</div>
+    </div>
+  </div> 
+  <div class="p-10">
+    <!--Card 1-->
+    <div class="rounded-md  w-full lg:max-w-full lg:flex flex justify-center items-center">
+      <div class="shadow-lg border-b-4 border-l-4 border-green-700 lg:border-t-4 bg-green-600 p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-8 text-center">
+          <p class="text-gray-100 text-6xl text-bold">65.7 Million</p>
+          <p class="text-gray-100 text-xl">Domestic voters</p>
+        </div>
+      </div>
+      <div class="shadow-lg h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+        <div class="border-double border-8 border-green-900 bg-green-200">
+          <img src="images\voteImage1.png" alt="first image"class="object-cover h-full w-screen"> 
+        </div>  
+      </div>
+      <div class="shadow-lg border-b-4 border-r-4 border-green-700 lg:border-t-4 bg-green-600 p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-8 text-center">
+          <p class="text-gray-100 text-6xl text-bold">1.8 Million</p>
+          <p class="text-gray-100 text-xl">Overseas voters</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="candidates" class="bg-blue-900 rounded shadow-xl">
+    <div class="select-none text-center text-4xl font-bold pt-8 text-gray-100">PRESIDENTAL CANDIDATES</div>
+    <div class="min-h-screen flex items-center justify-center">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
+    <!--1-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\Abella.png" alt="Ernesto Abella" class="object-cover"> 
+          <td class="text-bold">1. Ernesto "ERNIE" Abella</td>
+        </td>
+      </div>
+    <!--2-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\Leody.png" alt="KA LEODY" class="object-cover"> 
+          <td class="text-bold">2. Leodegario "KA LEODY" De Guzman</td>
+        </td>
+      </div>
+    <!--3-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\moreno.jpg" alt="ISKO MORENO" class="object-cover"> 
+          <td class="text-bold">3. Francisco "ISKO MORENO" Domagoso</td>
+        </td>
+      </div>
+    <!--4-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\noberto.jpg" alt="Norberto" class="object-cover"> 
+          <td class="text-bold">4. Norberto Gonzales</td>
+        </td>
+      </div>
+    <!--5-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\lacson.png" alt="PING" class="object-cover"> 
+          <td class="text-bold">5. Panfilo "PING" Lacson</td>
+        </td>
+      </div>
+    <!--6-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\Mangondato.jpg" alt="FAI" class="object-cover"> 
+          <td class="text-bold">6. Faisal "FAI" Mangondato</td>
+        </td>
+      </div>
+    <!--7-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\marcos.jpg" alt="BONGBONG" class="object-cover"> 
+          <td class="text-bold">7. Ferdinand "BONGBONG" Marcos Jr.</td>
+        </td>
+      </div>
+    <!--8-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\Montemayor.jpg" alt="Montemayor" class="object-cover"> 
+          <td class="text-bold">8. Jose "JOJOMON" Montemayor Jr./td>
+        </td>
+      </div>
+    <!--9-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\Pacquiao.png" alt="MANNY" class="object-cover"> 
+          <td class="text-bold">9. Emmanuel "MANNY" Pacquiao</td>
+        </td>
+      </div>
+    <!--10-->
+      <div class="bg-gray-200 text-center p-2 rounded-lg">
+        <td class="p-4">
+          <img src="images\robredo.png" alt="LENI" class="object-cover"> 
+          <td class="text-bold">10. Maria Leonor "LENI" Robredo</td>
+        </td>
+      </div>
+    </div>
+    </div>
+  </div>  
+  <!--vice president-->
+  <div class="bg-green-900 shadow-xl rounded-t mt-8">
+    <div class="select-none text-center text-4xl font-bold pt-8 text-gray-100">VICE PRESIDENTAL CANDIDATES</div>
+    <div class="min-h-screen flex items-center justify-center">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
+  <!--1-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\Atienza.jpg" alt="LITO" class="object-cover"> 
+        <td class="text-bold">1. Jose "LITO" Atienza Jr.</td>
+      </td>
+    </div>
+  <!--2-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\Bello.jpg" alt="WALDEN" class="object-cover"> 
+        <td class="text-bold">2. Walden "WALDEN" Bello</td>
+      </td>
+    </div>
+  <!--3-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\david.jpg" alt="LITO" class="object-cover"> 
+        <td class="text-bold">3. Jose Rizalito "LITO" David</td>
+      </td>
+    </div>        
+  <!--3-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\duterte.jpg" alt="INDAY SARA" class="object-cover"> 
+        <td class="text-bold">3. Sara "INDAY SARA" Duterte - Carpio</td>
+      </td>
+    </div>
+  <!--4-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\lopez.png" alt="MANNY" class="object-cover"> 
+        <td class="text-bold">4. Emmanuel "MANNY" Lopez</td>
+      </td>
+    </div>
+  <!--5-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\ong.jpg" alt="DOC WILLIE" class="object-cover"> 
+        <td class="text-bold">5. Willie "DOC WILLIE" Ong</td>
+      </td>
+    </div>
+  <!--6-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\pangilinan.png" alt="KIKO" class="object-cover"> 
+        <td class="text-bold">6. Francis Pancratius "KIKO" Pangilinan</td>
+      </td>
+    </div>
+  <!--7-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\Serapio.png" alt="KUYA CHARLIE" class="object-cover"> 
+        <td class="text-bold">7. Carlos "KUYA CHARLIE" Serapio.</td>
+      </td>
+    </div>
+  <!--8-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\Montemayor.jpg" alt="Montemayor" class="object-cover"> 
+        <td class="text-bold">8. Jose "JOJOMON" Montemayor Jr./td>
+      </td>
+    </div>
+  <!--9-->
+    <div class="bg-gray-200 text-center p-2 rounded-lg">
+      <td class="p-4">
+        <img src="images\Sotto.jpg" alt="TITO" class="object-cover"> 
+        <td class="text-bold">9. Vicente "TITO" Sotto III</td>
+      </td>
+    </div>
+  
+    </div>
+    </div>
+  </div>        
+  </div>
+
+</body>
+
+<footer class="rounded-b flex justify-center px-4 text-gray-100 bg-green-800">
+  <div class="container py-6">
+      <h1 class="text-center text-lg font-bold lg:text-2xl">
+          Subscribe for daily updates <br> about the 2022 Election
+      </h1>
+
+      <div class="flex justify-center mt-6">
+          <div class="bg-white rounded-lg">
+              <div class="flex flex-wrap justify-between md:flex-row">
+                  <input type="email" class="m-1 p-2 appearance-none text-gray-700 text-sm" placeholder="Enter your email here">
+                  <button class="w-full m-2 p-2 text-sm bg-green-500 rounded-lg font-semibold uppercase lg:w-auto">subscribe</button>
+                </div>
+                
+          </div>
+          <div 
+          id="div1" 
+          style="width:50px; height:50px; display:none;"
+          class=" ml-2 p-2 text-sm bg-green-500 rounded-full flex items-center">
+        Thank you :)</div>
+      </div>
+
+      <hr class="h-px mt-6 bg-white border-none">
+
+      <div class="flex flex-col items-center justify-between mt-6 md:flex-row">
+          <div>
+              <a href="#" class="text-xl font-bold">Elections 2022</a>
+          </div>
+          <div class="flex mt-4 md:m-0">
+              <div class="-mx-4">
+                <a href="#about" class="px-4 text-sm">About</a>
+                <a href="https://votepilipinas.com" class="px-4 text-sm">Reference</a>
+                <a href="https://eboto.ph" class="px-4 text-sm">References 2</a>
+                <a href="#top" class="px-4 text-sm">Back to top</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+</html>

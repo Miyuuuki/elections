@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+div {
+    font-family: 'Dosis', sans-serif;
+}
+
+body { 
+    padding: 2em; 
+} 
+
+a { 
+    text-decoration: none; 
+    color: #fff; 
+}
+
+div#nav { 
+    position: relative; 
+} 
+
+div#nav a { 
+    padding: 5px 15px 5px; 
+}
+
+.dropdown-toggle { 
+    padding: 0; 
+}
+
+ul.dropdown { 
+    display: none; 
+    position: absolute; 
+    top: 100%;
+    margin-top: 5px; 
+    padding: 5px 5px 0 0; 
+    background: #1e40af; 
+}
+
+ul.dropdown li { 
+    list-style-type: none; 
+}
+
+ul.dropdown li a { 
+    text-decoration: none; 
+    padding: 0em 1em; 
+    display: block; 
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #1e3a8a;
+    border: solid 1px #ffffff;
+  }
+  
+  #panel {
+    padding: 50px;
+    display: none;
+  }
